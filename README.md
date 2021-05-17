@@ -34,5 +34,5 @@ In Ubuntu 20.10 or higher, you can install all dependencies with `sudo apt insta
 ### Container-based installation
 
 * For container management, use [Podman](https://podman.io) or [Docker](https://www.docker.com/)
-* If your distribution uses SELinux, you may need to adjust the folder's security context with `sudo chcon -Rt svirt_sandbox_file_t .`
+* If your distribution uses SELinux, you may need to adjust the folder's security context with `sudo chcon -Rt container_file_t .`
 * For local website serve and container management, use the Make targets `container`, `build-container` and `delete-container` in the _parent localized repository_

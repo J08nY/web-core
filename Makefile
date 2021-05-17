@@ -33,7 +33,7 @@ container:
 build-container:
 	$(PODMAN) build --file Dockerfile --tag $(CONTAINER_IMAGE) .
 	$(PODMAN) run --interactive --tty --name $(CONTAINER_NAME) \
-		--volume $$PWD/..:/srv/jekyll --publish 4000:4000 $(CONTAINER_IMAGE) ||:
+		--volume $$PWD/..:/srv/jekyll:z --publish 4000:4000 $(CONTAINER_IMAGE) ||:
 
 delete-container:
 	$(PODMAN) rm --force $(CONTAINER_NAME)
@@ -49,7 +49,7 @@ build: $(INFOGRAPHICS_DST) $(STUDIES_DST) $(COVERS_DST) generated-files bundle-i
 	@if [ "$(BRANCH)" = "master" ]; then JEKYLL_ENV=production bundle exec jekyll build; else bundle exec jekyll build; fi
 
 local: $(INFOGRAPHICS_DST) $(STUDIES_DST) $(COVERS_DST) generated-files bundle-install
-	bundle exec jekyll serve --trace
+	bundle exec jekyll serve --trace --host 0.0.0.0
 
 check: build
 	@echo "Running internal tests on the generated site using html-proofer ..."
