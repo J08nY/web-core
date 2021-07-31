@@ -5,7 +5,7 @@
         {% if forloop.index == include.limit and include.link %}
             {% if include.link == "news" %}
                 <a href="/{{ site.slugs.news }}" class="preview-card card">
-            {% else %} 
+            {% else %}
                 <a href="/{{ site.slugs.topics }}/{{ include.link.id }}" class="preview-card card">
             {% endif %}
         {% else %}

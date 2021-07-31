@@ -17,6 +17,10 @@ cdn:
     tocbot_hash:        "sha512-8u1QblAcGUuhEv26YgTYO3+OtPL7l37qiYoPQtahVTaiLn/H3Z/K16TOXJ3U7PDYBiJWCWKM0a+ELUDGDgED2Q=="
     fuse:               "https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"
     fuse_hash:          "sha512-KnvCNMwWBGCfxdOtUpEtYgoM59HHgjHnsVGSxxgz7QH1DYeURk+am9p3J+gsOevfE29DV0V+/Dd52ykTKxN5fA=="
+    fancyapps_js:       "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.umd.js"
+    fancyapps_js_hash:  "sha512-GS982flLk1rH+Efk7YgyvpxZ90CjaKFWJyQiRcr4DJEAM9b5fc9hQQfOWdXlX4fjvRrS4gpe4j8iD8AFhYwQsA=="
+    fancyapps_css:      "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.css"
+    fancyapps_css_hash: "sha512-07t+5mygZNGxTjFtTgJi/IyYqb3SGiJGJ3V73dO8IN5s0qiCPs3faLL3mcLdA09GZjNVhMsnLd1ytkJHX+Isnw=="
 
 # What files to include/exclude from final site?
 include: [ ".well-known" ] # .well-known-templates implicitly excluded

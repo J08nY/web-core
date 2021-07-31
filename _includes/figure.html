@@ -1,5 +1,5 @@
 <div class="longread-figure">
-  <a href="/assets-local/figures/{{ page.slug }}/{{ include.name }}">
+  <a data-fancybox href="/assets-local/figures/{{ page.slug }}/{{ include.name }}">
     <picture>
       {%- if include.name-mobile %}
       <source media="(max-width: 767px)" srcset="/assets-local/figures/{{ page.slug }}/{{ include.name-mobile }}">
@@ -10,7 +10,7 @@
   {%- if include.caption or (include.source-text and include.source-url) %}
   <div class="source">
     {%- if include.caption %}
-      {{- include.caption }} 
+      {{- include.caption }}
     {%- endif %}
     {%- if include.source-text %}
       Zdroj: <a href="{{ include.source-url }}">{{ include.source-text }}</a>
