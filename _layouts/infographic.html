@@ -14,7 +14,7 @@
         {% assign download_path = "/assets/generated/" | append: page.slug %}
         <div class="row">
           <div class="col-lg-9">
-            <a class="infographic" id="infographic-fullscreen" href="{{ download_path }}_6000.png">
+            <a class="infographic" id="infographic-fullscreen" href="{{ download_path }}_6000.png" data-fancybox>
               <img class="infographic" src="{{ download_path }}_1920.png" alt="{{ page.title }}"
                 srcset="{{ download_path }}_600.png 600w, {{ download_path }}_1200.png 1200w, {{ download_path }}_1920.png 1920w, {{ download_path }}_6000.png 6000w"/>
             </a>

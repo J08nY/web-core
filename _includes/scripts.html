@@ -1,10 +1,17 @@
+<script>
+window.fakta = {
+  lang: '{{ site.lang }}',
+};
+</script>
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.bootstrap_js }}" integrity="{{ site.cdn.bootstrap_js_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.tocbot }}" integrity="{{ site.cdn.tocbot_hash }}" crossorigin="anonymous"></script>
 <script src="{{ site.cdn.fuse }}" integrity="{{ site.cdn.fuse_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.fancyapps_js }}" integrity="{{ site.cdn.fancyapps_js_hash }}" crossorigin="anonymous"></script>
 <script src="/assets/js/search.js"></script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/newsletter.js"></script>
+<script src="/assets/js/fancybox.js"></script>
 {% include newsletter.html %}
 {% if jekyll.environment == "production" %}
 {% include includes-local/website-analytics-noscript.html %}
