@@ -1,10 +1,12 @@
 <div class="longread-figure">
-  <a href="/assets-local/figures/{{ page.slug }}/{{ include.name }}" data-fancybox 
-    data-options='{
-      {%- if include.caption -%}
-      "caption": {{ include.caption | jsonify }}
-      {%- endif -%}
-    }'>
+  <a href="/assets-local/figures/{{ page.slug }}/{{ include.name }}" data-fancybox
+    {%- assign suffix = include.name | split:'.' | last %}
+    {%- if suffix == "svg" %}
+    data-type="iframe"
+    {%- endif %}
+    {%- if include.caption %}
+    data-options='{ "caption": {{ include.caption | jsonify }} }'
+    {%- endif %}>
     <picture>
       {%- if include.name-mobile %}
       <source media="(max-width: 767px)" srcset="/assets-local/figures/{{ page.slug }}/{{ include.name-mobile }}">
