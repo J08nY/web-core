@@ -17,7 +17,6 @@
   const defaults = $.fancybox.defaults;
   defaults.lang = window.fakta.lang;
   defaults.buttons = [
-    'download',
     'close',
   ];
   for (const [lang, values] of Object.entries(i18n)) {
