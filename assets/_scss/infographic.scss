@@ -35,6 +35,23 @@ p.caption {
     }
 }
 
+@media print {
+    .infographic-title {
+        display: none;
+    }
+    .infographic-box {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    img.infographic {
+        margin: 0;
+    }
+    .downloads-box {
+        display: none;
+    }
+
+}
+
 .dropdown-links a {
     text-decoration: none;
 }
@@ -258,5 +275,16 @@ div.longread-figure {
         margin-right: 0;
         position: relative;
         left: 45%;
+    }
+}
+
+@media print {
+    .longread-toc, .longread-xl-space-left, .longread-xl-space-middle, 
+    .longread-xl-space-right, .preview-box, .highlight-text-box {
+        display: none;
+    }
+    .longread {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }

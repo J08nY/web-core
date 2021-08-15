@@ -1,7 +1,7 @@
 {% assign related_by_tags = site.documents | where_exp: "item", "'infographics, studies, explainers' contains item.collection"
 | where_exp: "item", "item.tags contains page.tags-topics[0]" | where_exp: "item", "item.slug != page.slug" | sample: 3 %}
 {% if related_by_tags.size > 0 %}
-<div class="section">
+<div class="section" id="related">
   <div class="container">
     <h2>{{ site.data.lang.text.related.title }}</h2>
     <p>{{ site.data.lang.text.related.caption }}</p>

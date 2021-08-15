@@ -19,6 +19,13 @@ body {
     }
 }
 
+@media print {
+    body {
+        padding-top: 0;
+        color: black;
+    }
+}
+
 main {
     flex-grow: 1;
 }
@@ -119,6 +126,12 @@ pre {
 
 .section:nth-of-type(odd) {
     background-color: white;
+}
+
+@media print {
+    .section {
+        background-color: white;
+    }
 }
 
 ul:last-child {
@@ -323,6 +336,12 @@ img.text-img {
     }
 }
 
+@media print {
+    #dev-warning {
+        display: none;
+    }
+}
+
 /* Footer */
 
 footer {
@@ -346,6 +365,12 @@ footer {
 
     a:hover {
         text-decoration: none;
+    }
+}
+
+@media print {
+    footer {
+        display: none;
     }
 }
 
@@ -427,5 +452,11 @@ ul.inline-bullet-list {
             content: "\2022\ ";
             margin: 0 0.4em;
         }
+    }
+}
+
+@media print {
+    #related {
+        display: none;
     }
 }
